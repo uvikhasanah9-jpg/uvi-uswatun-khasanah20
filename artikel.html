@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog &amp; Cerita Kuliner Artisanal Dessert - Blissfulberry</title>
+  <meta name="description" content="Kumpulan artikel, tips gaya hidup sehat, manfaat superfood Acai Bowl, dan kisah kuliner viral Gabin Ice Cream dari dapur Blissfulberry. Baca inspirasi kuliner manis di sini!">
+  <meta name="keywords" content="blog kuliner, artikel dessert, tips acai bowl, sejarah gabin ice cream, inspirasi kuliner umkm, blissfulberry blog">
+  <meta name="author" content="Blissfulberry Artisanal Dessert">
+  <link rel="canonical" href="https://blissfulberry.my.id/artikel.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://blissfulberry.my.id/artikel.html">
+  <meta property="og:title" content="Blog &amp; Inspirasi Kuliner Manis - Blissfulberry">
+  <meta property="og:description" content="Temukan rahasia nutrisi Acai Bowl dan nostalgia renyahnya Gabin Ice Cream viral.">
+  <meta property="og:image" content="https://blissfulberry.my.id/assets/images/article-acai-bowl.svg">
+  <meta property="og:site_name" content="Blissfulberry">
+  <meta property="og:locale" content="id_ID">
+
+  <!-- Favicon & PWA App Manifest -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#e11d48">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Blissfulberry">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rose: {
+              50: '#fff1f2',
+              100: '#ffe4e6',
+              200: '#fecdd3',
+              300: '#fda4af',
+              400: '#fb7185',
+              500: '#f43f5e',
+              600: '#e11d48',
+              700: '#be123c',
+              800: '#9f1239',
+              900: '#881337',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            accent: ['Fredoka', 'Quicksand', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Google Analytics 4 Script Template -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLISSFULBERRY1"></script>
+  <script src="assets/js/analytics.js"></script>
+</head>
+<body class="bg-[#FFFBF7] text-slate-700 flex flex-col min-h-screen">
+
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:p-3 focus:bg-rose-600 focus:text-white focus:rounded-lg">
+    Lewati ke konten utama
+  </a>
+
+  <!-- Header Navigation -->
+  <header id="mainNavbar" class="sticky top-0 z-40 navbar-glass transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-2 focus:outline-none" aria-label="Beranda Blissfulberry">
+          <img src="assets/images/logo.svg" alt="Logo Resmi Blissfulberry Artisanal Dessert" class="h-11 w-auto" width="220" height="55">
+        </a>
+
+        <nav class="hidden md:flex items-center space-x-8" aria-label="Navigasi Utama">
+          <a href="index.html" class="nav-link text-sm font-bold">Beranda</a>
+          <a href="produk.html" class="nav-link text-sm font-bold">Menu &amp; Produk</a>
+          <a href="pesan.php" class="nav-link text-sm font-bold text-amber-700 hover:text-amber-800">Form Pemesanan</a>
+          <a href="admin-pesanan.php" class="nav-link text-sm font-bold text-rose-600 hover:text-rose-700">Kelola Pesanan (MySQL)</a>
+          <a href="artikel.html" class="nav-link active text-sm font-bold">Cerita &amp; Blog</a>
+          <a href="kontak.html" class="nav-link text-sm font-bold">Kontak &amp; Lokasi</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <button 
+            type="button" 
+            onclick="if(window.blissfulCart) window.blissfulCart.openDrawer()" 
+            class="relative p-2.5 rounded-full bg-rose-50 text-rose-600 hover:bg-rose-100 transition border border-rose-200"
+            aria-label="Buka Keranjang Pesanan"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+            <span id="cartBadgeCount" class="cart-count-badge absolute -top-1.5 -right-1.5 hidden">0</span>
+          </button>
+
+          <a 
+            href="https://wa.me/6282116506727?text=Halo%20Blissfulberry!%20Saya%20ingin%20tanya%20menu." 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="btn-primary text-xs sm:text-sm !py-2.5 !px-4 hidden sm:inline-flex"
+            data-track="whatsapp"
+            data-track-source="blog_header_cta"
+          >
+            <span>Pesan Cepat</span>
+          </a>
+
+          <button 
+            type="button" 
+            id="mobileNavToggle" 
+            class="md:hidden p-2 rounded-lg text-gray-600 hover:text-rose-600 hover:bg-rose-50" 
+            aria-expanded="false" 
+            aria-controls="mobileMenu"
+            aria-label="Buka Menu Navigasi"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <nav id="mobileMenu" class="md:hidden hidden pb-4 pt-2 border-t border-rose-100" aria-label="Navigasi Mobile">
+        <div class="flex flex-col space-y-2">
+          <a href="index.html" class="px-3 py-2 rounded-lg font-bold text-gray-700 hover:text-rose-600 hover:bg-rose-50">Beranda</a>
+          <a href="produk.html" class="px-3 py-2 rounded-lg font-bold text-gray-700 hover:text-rose-600 hover:bg-rose-50">Menu &amp; Produk</a>
+          <a href="pesan.php" class="px-3 py-2 rounded-lg font-bold text-amber-700 hover:text-rose-600 hover:bg-amber-50">📝 Form Pemesanan (MySQL)</a>
+          <a href="admin-pesanan.php" class="px-3 py-2 rounded-lg font-bold text-rose-600 hover:bg-rose-50">📊 Kelola Pesanan (Admin)</a>
+          <a href="artikel.html" class="px-3 py-2 rounded-lg font-bold text-rose-600 bg-rose-50">Cerita &amp; Blog</a>
+          <a href="kontak.html" class="px-3 py-2 rounded-lg font-bold text-gray-700 hover:text-rose-600 hover:bg-rose-50">Kontak &amp; Lokasi</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" class="flex-grow">
+    
+    <!-- Blog Header Banner -->
+    <section class="bg-gingham py-12 border-b border-rose-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-rose-200 text-rose-600 text-xs font-bold mb-4">
+          📖 Jurnal Kuliner &amp; Edukasi Nutrisi
+        </span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight">
+          Cerita, Tips &amp; Tren Dessert
+        </h1>
+        <p class="mt-3 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+          Temukan wawasan nutrisi makanan sehat, cerita di balik kelezatan menu lokal, dan tips menikmati camilan manis tanpa rasa bersalah.
+        </p>
+      </div>
+    </section>
+
+    <!-- Articles Grid Section -->
+    <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- Article Card 1 -->
+          <article class="card-dessert flex flex-col justify-between group">
+            <div>
+              <a href="artikel-1.html" class="block aspect-video overflow-hidden bg-purple-50">
+                <img 
+                  src="assets/images/article-acai-bowl.svg" 
+                  alt="Ilustrasi Semangkuk Acai Bowl Kaya Antioksidan dan Buah Segar" 
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="340"
+                >
+              </a>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="badge-tag bg-purple-100 text-purple-700 font-bold">Kesehatan &amp; Superfood</span>
+                  <span class="text-xs text-gray-400">10 November 2026</span>
+                </div>
+                <h2 class="text-xl font-bold text-gray-900 group-hover:text-rose-600 transition mb-3">
+                  <a href="artikel-1.html">5 Rahasia Acai Bowl: Segar, Padat Nutrisi, dan Mood Booster Alami</a>
+                </h2>
+                <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                  Ketahui bagaimana antosianin, omega esensial, dan serat alami buah acai dari pedalaman Amazon menjaga stamina dan membuat kulit tetap glowing berseri.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-3 border-t border-rose-50 flex items-center justify-between">
+              <span class="text-xs text-gray-400">Oleh: dr. Ratna Wulandari</span>
+              <a href="artikel-1.html" class="text-sm font-bold text-rose-600 group-hover:underline flex items-center gap-1">
+                <span>Baca Lengkap</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article Card 2 -->
+          <article class="card-dessert flex flex-col justify-between group">
+            <div>
+              <a href="artikel-2.html" class="block aspect-video overflow-hidden bg-amber-50">
+                <img 
+                  src="assets/images/article-gabin.svg" 
+                  alt="Ilustrasi Gabin Ice Cream Sandwich Biskuit Renyah dan Es Krim Tebal" 
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="340"
+                >
+              </a>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="badge-tag bg-amber-100 text-amber-800 font-bold">Kuliner Nostalgia</span>
+                  <span class="text-xs text-gray-400">12 November 2026</span>
+                </div>
+                <h2 class="text-xl font-bold text-gray-900 group-hover:text-rose-600 transition mb-3">
+                  <a href="artikel-2.html">Sensasi Gabin Ice Cream: Renyahnya Biskuit Berpadu Lembutnya Es Krim Kekinian</a>
+                </h2>
+                <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                  Transformasi biskuit gabin jadul menjadi jajanan sandwich es krim viral dengan 9 rasa menarik seperti Matcha, Ubee, dan Thai Tea yang renyah tahan lama.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-3 border-t border-rose-50 flex items-center justify-between">
+              <span class="text-xs text-gray-400">Oleh: Bagas Pratama</span>
+              <a href="artikel-2.html" class="text-sm font-bold text-rose-600 group-hover:underline flex items-center gap-1">
+                <span>Baca Lengkap</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FLOATING CART BUTTON -->
+  <button 
+    type="button" 
+    id="floatingCartBtn" 
+    class="floating-cart-btn"
+    style="display: none;"
+    aria-label="Lihat Keranjang Belanja"
+  >
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+    </svg>
+    <span class="font-bold text-sm">Pesanan</span>
+    <span id="floatingCartBadge" class="cart-count-badge">0</span>
+  </button>
+
+  <!-- SLIDE-OUT CART DRAWER & OVERLAY -->
+  <div id="cartDrawerOverlay" class="cart-drawer-overlay"></div>
+  <aside id="cartDrawer" class="cart-drawer" aria-label="Keranjang Pesanan">
+    <div class="p-5 border-b border-rose-100 flex items-center justify-between bg-rose-50/50">
+      <div class="flex items-center gap-2">
+        <svg class="w-6 h-6 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+        <h3 class="font-extrabold text-gray-900 text-lg">Keranjang Pesanan</h3>
+      </div>
+      <button type="button" id="closeCartBtn" class="p-2 text-gray-400 hover:text-gray-700 rounded-lg" aria-label="Tutup Keranjang">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+      </button>
+    </div>
+    <div id="cartItemsList" class="flex-1 overflow-y-auto p-5 space-y-3"></div>
+    <div class="p-5 border-t border-rose-100 bg-rose-50/30 space-y-3">
+      <div class="space-y-1.5 text-xs text-gray-600">
+        <div class="flex justify-between font-medium"><span>Subtotal:</span><span id="cartSubtotal" class="font-bold text-gray-800">Rp 0</span></div>
+        <div class="flex justify-between text-sm font-extrabold text-rose-600 pt-1 border-t border-rose-100"><span>Total:</span><span id="cartTotal">Rp 0</span></div>
+      </div>
+      <div class="space-y-2 pt-2">
+        <div>
+          <label for="customerNameInput" class="block text-xs font-bold text-gray-700 mb-1">Nama Pemesan</label>
+          <input type="text" id="customerNameInput" placeholder="Contoh: Sarah / Budi" class="w-full text-xs p-2.5 rounded-lg border border-rose-200 bg-white">
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label for="orderTypeSelect" class="block text-xs font-bold text-gray-700 mb-1">Layanan</label>
+            <select id="orderTypeSelect" class="w-full text-xs p-2.5 rounded-lg border border-rose-200 bg-white">
+              <option value="Takeaway">Takeaway</option>
+              <option value="Dine-in">Dine-in</option>
+              <option value="Delivery">Delivery</option>
+            </select>
+          </div>
+          <div>
+            <label for="customerNotesInput" class="block text-xs font-bold text-gray-700 mb-1">Catatan</label>
+            <input type="text" id="customerNotesInput" placeholder="Catatan tambahan" class="w-full text-xs p-2.5 rounded-lg border border-rose-200 bg-white">
+          </div>
+        </div>
+      </div>
+      <button type="button" id="checkoutWhatsAppBtn" class="w-full btn-primary btn-whatsapp text-sm !py-3 flex items-center justify-center gap-2">
+        <span>Kirim Pesanan ke WhatsApp</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300 pt-16 pb-8 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-gray-800">
+        <div class="lg:col-span-2">
+          <a href="index.html" class="inline-block mb-4" aria-label="Beranda Blissfulberry">
+            <span class="text-2xl font-black text-white font-accent">Blissful<span class="text-rose-500">berry</span></span>
+          </a>
+          <p class="text-sm text-gray-400 leading-relaxed mb-6 max-w-sm">
+            Gerai UMKM kuliner artisanal dessert &amp; savory bites. Menyajikan Chocoberry cone lezat, Acai Bowl superfood bernutrisi tinggi, Gabin Ice Cream viral, Banana Pudding, serta Mac N Cheese nikmat.
+          </p>
+          <div class="flex items-center gap-3">
+            <a href="https://www.instagram.com/blissfulberry.id?utm_source=website&utm_medium=footer_social&utm_campaign=brand_presence" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-gray-800 hover:bg-rose-600 text-white flex items-center justify-center transition" aria-label="Instagram Blissfulberry">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@BlissfulBerry.id?utm_source=website&utm_medium=footer_social&utm_campaign=brand_presence" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-gray-800 hover:bg-rose-600 text-white flex items-center justify-center transition" aria-label="TikTok BlissfulBerry.id">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.86 4.45V11.8a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-2.04-.63 4.8 4.8 0 0 1-1.09-.85z"/></svg>
+            </a>
+            <a href="https://wa.me/6282116506727?text=Halo%20Admin%20Blissfulberry!&utm_source=website&utm_medium=footer_icon&utm_campaign=direct_chat" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-gray-800 hover:bg-emerald-600 text-white flex items-center justify-center transition" aria-label="WhatsApp Blissfulberry">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.066-1.134-.075-.285-.091-.652-.224-1.144-.437-2.083-.902-3.447-3.033-3.551-3.174-.105-.14-8.5-1.13-8.5-2.158 0-1.028.536-1.534.726-1.744.19-.21.415-.262.553-.262.138 0 .277.001.398.007.128.007.3.048.468.455.174.423.593 1.45.646 1.556.052.106.087.23.017.37-.07.14-.105.228-.21.351-.105.123-.221.275-.316.369-.105.105-.215.22-.093.43.123.21.547.902 1.173 1.46 1.05.935 1.936 1.226 2.213 1.364.277.139.44.116.604-.07.164-.187.702-.816.889-1.096.187-.28.374-.233.626-.14.252.093 1.597.753 1.872.89.275.137.458.205.525.32.067.115.067.669-.077 1.074z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4">Navigasi Halaman</h4>
+          <ul class="space-y-2.5 text-xs text-gray-400">
+            <li><a href="index.html" class="hover:text-rose-400 transition">Beranda Utama</a></li>
+            <li><a href="produk.html" class="hover:text-rose-400 transition">Menu &amp; Daftar Harga</a></li>
+            <li><a href="artikel.html" class="hover:text-rose-400 transition">Blog &amp; Cerita Kuliner</a></li>
+            <li><a href="kontak.html" class="hover:text-rose-400 transition">Kontak, Peta &amp; Jam Buka</a></li>
+            <li><a href="sitemap.xml" class="hover:text-rose-400 transition">Sitemap XML</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4">Topik Artikel</h4>
+          <ul class="space-y-2.5 text-xs text-gray-400">
+            <li><a href="artikel-1.html" class="hover:text-rose-400 transition">Manfaat Acai Bowl</a></li>
+            <li><a href="artikel-2.html" class="hover:text-rose-400 transition">Nostalgia Gabin Ice Cream</a></li>
+            <li><a href="produk.html" class="hover:text-rose-400 transition">Menu Hits Viral</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4">Jam Operasional</h4>
+          <div class="text-xs text-gray-400 space-y-2 leading-relaxed">
+            <p><strong class="text-white">Senin - Minggu:</strong><br> <span class="text-emerald-400 font-bold">OPEN!</span> 13.00 - 21.00 WIB</p>
+            <p><strong class="text-white">Alamat:</strong><br> Jl. Yudhasari ll, Sunyaragi, Kec. Kesambi, Kota Cirebon, Jawa Barat 45132 (Samping Arena Digital Printing)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+        <p>&copy; <span class="current-year">2026</span> <strong>Blissfulberry Artisanal Dessert</strong>. Hak Cipta Dilindungi Undang-Undang.</p>
+        <div class="flex items-center gap-4">
+          <a href="kontak.html" class="hover:text-rose-400 transition">Bantuan &amp; FAQ</a>
+          <span class="text-gray-700">&bull;</span>
+          <a href="robots.txt" class="hover:text-rose-400 transition">Robots.txt</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

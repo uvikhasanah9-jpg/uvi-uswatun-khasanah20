@@ -1,0 +1,18 @@
+# Robots.txt untuk Blissfulberry Artisanal Dessert UMKM
+# https://blissfulberry.my.id/
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /produk.html
+Allow: /artikel.html
+Allow: /artikel-1.html
+Allow: /artikel-2.html
+Allow: /kontak.html
+Allow: /assets/
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Peta Situs Resmi (Sitemap)
+Sitemap: https://blissfulberry.my.id/sitemap.xml

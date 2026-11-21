@@ -1,0 +1,24 @@
+{
+  "name": "Blissfulberry Artisanal Dessert",
+  "short_name": "Blissfulberry",
+  "description": "Artisanal Dessert, Superfood Acai Bowl, Gabin Ice Cream & Mac N Cheese",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#FFFBF7",
+  "theme_color": "#e11d48",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "assets/images/favicon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/images/favicon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
